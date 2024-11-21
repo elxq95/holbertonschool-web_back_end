@@ -1,24 +1,22 @@
 export default class Car {
     constructor(brand, motor, color) {
-      // Validate inputs
-      if (typeof brand !== 'string' || typeof motor !== 'string' || typeof color !== 'string') {
-        throw new TypeError('All attributes must be strings');
-      }
+      // if (typeof brand !== 'string') {
+      //   throw new TypeError('Brand must be a string');
+      // }
   
-      // Assign to underscore-prefixed attributes
+      // if (typeof motor !== 'string') {
+      //   throw new TypeError('Motor must be a string');
+      // }
+  
+      // if (typeof color !== 'string') {
+      //   throw new TypeError('Color must be a string');
+      // }
       this._brand = brand;
       this._motor = motor;
       this._color = color;
     }
   
-    // Method to clone the car
     cloneCar() {
-      const NewCar = this.constructor[Symbol.species] || this.constructor;
-      return new NewCar();
-    }
-  
-    // Static getter for Symbol.species
-    static get [Symbol.species]() {
-      return this;
+      return new this.constructor();
     }
   }
