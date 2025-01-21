@@ -16,6 +16,7 @@
         "express": "^4.17.1"
     },
     "devDependencies": {
+        "@eslint/js": "^9.18.0",
         "babel-cli": "^6.26.0",
         "babel-preset-env": "^0.0.0",
         "chai": "^4.4.1",
@@ -23,10 +24,12 @@
         "eslint-config-airbnb-base": "^14.2.1",
         "eslint-plugin-import": "^2.29.1",
         "eslint-plugin-jest": "^28.11.0",
+        "globals": "^15.14.0",
         "lint": "*",
         "mocha": "^11.0.1",
         "nodemon": "^3.1.9",
         "request": "^2.88.2",
-        "sinon": "^7.5.0"
+        "sinon": "^7.5.0",
+        "typescript-eslint": "^8.21.0"
     }
 }
